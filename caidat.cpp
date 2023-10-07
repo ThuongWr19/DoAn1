@@ -354,9 +354,8 @@ bool checkSumGoodStudentHeadHalfListIsBiggerThanSumGoodStudentFollowingHalfList(
 	else
 		return false;
 }
-
 //Cau 15
-void find2studentshavetotalmathscores(CLS m) {
+void find2StudentsHaveTotalMathScores(CLS m) {
 	int temp = 0;
 	for (int i = 1; i < size(m); i++) {
 		for (int j = 0; j < size(m); j++) {
@@ -374,7 +373,7 @@ void find2studentshavetotalmathscores(CLS m) {
 }
 
 //Cau16
-void addnewstudenntcheckalikecode(CLS& m, int quantity) {
+void addNewStudenntCheckAlikeCode(CLS& m, int quantity) {
 	int h = 0;
 	bool flag = true;
 	for (int i = 1; i <= quantity; i++) {
@@ -416,7 +415,7 @@ void addnewstudenntcheckalikecode(CLS& m, int quantity) {
 	}
 }
 //Cau 17
-void splitgoodstuddents(CLS& m, CLS& m1) {
+void splitGoodStudents(CLS& m, CLS& m1) {
 	int d = 0; int s = 0;
 	size(m1) = 0;
 	//int j = 0;
@@ -449,7 +448,7 @@ void splitgoodstuddents(CLS& m, CLS& m1) {
 	cout << endl;
 }
 //Cau 19
-void split3subjectstuddents(CLS& m, CLS& m2) {
+void split3SubjectStuddents(CLS& m, CLS& m2) {
 	int d = 0;
 	size(m2) = 0;
 	for (int i = 0; i < size(m); i++) {
