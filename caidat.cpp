@@ -11,7 +11,7 @@ void printLine(int n) {
 int& size(CLS& m) {
 	return m.n;
 }
-
+//Câu 18
 void OutputListStudent(CLS m) {
 	printLine(40);
 
@@ -45,10 +45,12 @@ void OutputOneStudent(CLS m, int i) {
 	cout << endl;
 }
 
+//Câu 1
 void EmptyListStudent(CLS& m) {
 	size(m) = 0;
 }
 
+//Câu 2
 void deleteList(CLS& m) {
 	if (size(m) > 0) {
 		size(m) = 0;
@@ -63,13 +65,7 @@ void averageSubject(STUDENT &student) {
 	student.averageSubject = (student.subject[0] + student.subject[1] + student.subject[2]) / 3;
 }
 
-void removeStudent(CLS& m, int n) {
-	for (int i = n; i < size(m)-1; i++) {
-		m.list[i] = m.list[i + 1];
-	}
-	size(m)--;
-}
-
+//Câu 3
 void addNewStudent(CLS& m, int quantity) {
 	Student stu{};
 	for (int i = 1; i <= quantity; i++) {
@@ -97,6 +93,15 @@ void addNewStudent(CLS& m, int quantity) {
 	}
 }
 
+//Câu 4
+void removeStudent(CLS& m, int n) {
+	for (int i = n; i < size(m)-1; i++) {
+		m.list[i] = m.list[i + 1];
+	}
+	size(m)--;
+}
+
+//Câu 5
 void searchByCode(CLS m, int code) {
 	int temp = 0;
 	for (int i = 0; i < size(m); i++) {
@@ -125,8 +130,7 @@ void searchByName(CLS m, char name[]) {
 	}
 }
 
-
-
+//Câu 6
 void updateStudentInformation(STUDENT& student) {
 	printLine(40);
 	cout << "Enter new code student: ";
@@ -168,6 +172,7 @@ void updateStudent(CLS& m, int code) {
 	}
 }
 
+//Câu 7
 void sortUpByAverageSubject(CLS& m) {
 	STUDENT temp;
 	for (int i = 0; i < size(m); i++) {
@@ -179,6 +184,7 @@ void sortUpByAverageSubject(CLS& m) {
 	}
 }
 
+//Câu 8
 void splitDuplicateCode(CLS& m, CLS& m1) {
 	size(m1) = 0;
 
@@ -206,6 +212,7 @@ void splitDuplicateCode(CLS& m, CLS& m1) {
 	}
 }
 
+//Câu 9
 void removeDuplicateCode(CLS& m) {
 	int codeTemp = 0;
 	for (int i = 0; i < size(m); i++) {
@@ -227,6 +234,7 @@ void removeDuplicateCode(CLS& m) {
 	}
 }
 
+//Câu 10
 void SortUpByMath(CLS& m) {
 	for (int i = 0; i < size(m) - 1; i++) {
 		for (int j = size(m) - 1; j > i; j--) {
@@ -249,6 +257,7 @@ bool joinAndSort(CLS& m, CLS m1, CLS m2) {
 	return true;
 }
 
+//Câu 11
 int binarySearchByMath(CLS m, int x) {
 	int left = 0, right = size(m) - 1;
 	while (left <= right) {
@@ -265,6 +274,7 @@ int binarySearchByMath(CLS m, int x) {
 	return -1;
 }
 
+//Câu 12
 bool CheckListIsAscendingMath(CLS m) {
 	int count = 0;
 	for (int i = 0; i < size(m) - 1; i++) {
@@ -301,6 +311,7 @@ bool CheckListIsAscendingCPP(CLS m) {
 		return false;
 }
 
+//Câu 13
 bool CheckListIsDescendingMath(CLS m) {
 	int count = 0;
 	for (int i = 0; i < size(m) - 1; i++) {
@@ -337,7 +348,7 @@ bool CheckListIsDescendingCPP(CLS m) {
 		return false;
 }
 
-
+//Câu 14
 bool checkSumGoodStudentHeadHalfListIsBiggerThanSumGoodStudentFollowingHalfList(CLS m) {
 	int count1 = 0, count2 = 0;
 	for (int i = 0; i < size(m) / 2; i++) {
@@ -354,7 +365,8 @@ bool checkSumGoodStudentHeadHalfListIsBiggerThanSumGoodStudentFollowingHalfList(
 	else
 		return false;
 }
-//Cau 15
+
+//Câu 15
 void find2StudentsHaveTotalMathScores(CLS m) {
 	int temp = 0;
 	for (int i = 1; i < size(m); i++) {
@@ -372,7 +384,7 @@ void find2StudentsHaveTotalMathScores(CLS m) {
 
 }
 
-//Cau16
+//Câu 16
 void addNewStudenntCheckAlikeCode(CLS& m, int quantity) {
 	int h = 0;
 	bool flag = true;
@@ -414,7 +426,7 @@ void addNewStudenntCheckAlikeCode(CLS& m, int quantity) {
 			|| m.list[size(m) - 1].subject[2] < 0 || m.list[size(m) - 1].subject[2] > 10);
 	}
 }
-//Cau 17
+//Câu 17
 void splitGoodStudents(CLS& m, CLS& m1) {
 	int d = 0; int s = 0;
 	size(m1) = 0;
@@ -447,7 +459,7 @@ void splitGoodStudents(CLS& m, CLS& m1) {
 	}
 	cout << endl;
 }
-//Cau 19
+//Câu 19
 void split3SubjectStuddents(CLS& m, CLS& m2) {
 	int d = 0;
 	size(m2) = 0;
@@ -481,6 +493,7 @@ void split3SubjectStuddents(CLS& m, CLS& m2) {
 	cout << endl;
 }
 
+//Câu 20
 void OutputBestStudent(CLS m) {
 	float maxAverageSubject = m.list[0].averageSubject;
 	int index = 0;
