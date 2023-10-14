@@ -815,7 +815,7 @@ void menu(int n) {
 
 		case 15:
 			system("cls");
-			find2studentshavetotalmathscores(m);
+			find2StudentsHaveTotalMathScores(m);
 			ShowMenu();
 			break;
 
@@ -823,13 +823,13 @@ void menu(int n) {
 			system("cls");
 			cout << "Enter quantity of new student";
 			cin >> n;
-			addnewstudenntcheckalikecode(m, n);
+			addNewStudenntCheckAlikeCode(m, n);
 			ShowMenu();
 			break;
 
 		case 17:
 			system("cls");
-			splitgoodstuddents(m, m1);
+			splitGoodStudents(m, m1);
 			cout << "\n------------ List of old students ------------ " << endl;
 			OutputListStudent(m);
 			ShowMenu();
@@ -856,7 +856,7 @@ void menu(int n) {
 
 		case 19:
 			system("cls");
-			split3subjectstuddents(m, m2);
+			split3SubjectStuddents(m, m2);
 			cout << "\n------------ List of old students ------------ " << endl;
 			OutputListStudent(m);
 			ShowMenu();
